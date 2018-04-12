@@ -42,6 +42,13 @@ module.exports = {
 			}
 		]
 	},
+	devServer: {
+		proxy: {
+			'/api': 'http://localhost:8080',
+			'/socket.io': 'http://localhost:8080'
+		},
+		filename: 'bundle.js'
+	},
 	optimization: {
 		splitChunks: {
 			cacheGroups: {
