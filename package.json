@@ -6,7 +6,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"clean": "rimraf dist",
-		"dev": "webpack-dev-server",
+		"dev": "webpack-dev-server --mode development --open",
 		"prod": "npm run clean && webpack --mode production"
 	},
 	"keywords": ["boilerplate", "preact", "es6", "webpack4"],

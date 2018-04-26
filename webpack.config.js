@@ -10,7 +10,7 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[name].[chunkhash].js'
+		filename: 'js/[name].[chunkhash].js'
 	},
 	module: {
 		rules: [
@@ -62,7 +62,7 @@ module.exports = {
 		}
 	},
 	plugins: [
-		new ExtractTextPlugin('styles.css'),
-		new HtmlWebpackPlugin({ template: './public/index.html' })
+		new ExtractTextPlugin('css/styles.css'),
+		new HtmlWebpackPlugin({ template: './public/index.html', inject: true })
 	]
 }
