@@ -63,6 +63,10 @@ module.exports = {
 	},
 	plugins: [
 		new ExtractTextPlugin('css/styles.css'),
-		new HtmlWebpackPlugin({ template: './public/index.html', inject: true })
+		new HtmlWebpackPlugin({
+			template: './public/index.html',
+			inject: true,
+			favicon: './public/favicon.ico'
+		})
 	]
 }
