@@ -73,12 +73,6 @@ module.exports = {
 			inject: true,
 			favicon: './public/favicon.ico'
 		}),
-		new workboxPlugin.GenerateSW({
-			importsDirectory: 'js',
-			swDest: 'sw.js',
-			clientsClaim: true,
-			skipWaiting: true
-		}),
 		new WebpackPwaManifest({
 			name: 'Decent Preact BoilerPlate',
 			short_name: 'Decent BoilerPlate',
@@ -101,6 +95,21 @@ module.exports = {
 					src: path.resolve('src/logo.png'),
 					sizes: [36, 48, 72, 96, 144, 192, 512],
 					destination: path.join('icons', 'android')
+				}
+			]
+		}),
+		new workboxPlugin.GenerateSW({
+			importsDirectory: 'js',
+			swDest: 'sw.js',
+			clientsClaim: true,
+			skipWaiting: true,
+			runtimeCaching: [
+				{
+					// Match any request ends with .png, .jpg, .jpeg or .svg.
+					urlPattern: /\.(?:png|jpg|jpeg|svg|json)$/,
+
+					// Apply a cache-first strategy.
+					handler: 'cacheFirst'
 				}
 			]
 		})
