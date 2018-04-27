@@ -1,6 +1,9 @@
 import { h, render } from 'preact'
+import init from './registerServiceWorker'
 import 'preact/debug'
 import './style.scss'
-const App = () => <div>Hello from Preact!</div>
+
+init()
+const App = () => <div>Hello from Preact, Lets start Yeap yoo!</div>
 
 render(<App />, document.body)
