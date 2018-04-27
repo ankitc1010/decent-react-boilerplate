@@ -4,6 +4,7 @@
 	"description": "A basic boilerPlate for Preact",
 	"main": "index.js",
 	"scripts": {
+		"start": "npm run prod && node server.js",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "webpack-dev-server --mode development --open",
 		"prod": "webpack --mode production"
@@ -12,6 +13,8 @@
 	"author": "Ankit Chauhan",
 	"license": "ISC",
 	"dependencies": {
+		"compression": "^1.7.2",
+		"express": "^4.16.3",
 		"preact": "^8.2.7"
 	},
 	"devDependencies": {
