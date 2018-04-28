@@ -12,13 +12,20 @@
 		"prod": "webpack --mode production",
 		"coverage": "jest --coverage"
 	},
-	"keywords": ["boilerplate", "preact", "es6", "webpack4"],
+	"keywords": [
+		"boilerplate",
+		"preact",
+		"es6",
+		"webpack4"
+	],
 	"author": "Ankit Chauhan",
 	"license": "ISC",
 	"dependencies": {
 		"compression": "^1.7.2",
 		"express": "^4.16.3",
-		"preact": "^8.2.7"
+		"preact": "^8.2.7",
+		"preact-async-route": "^2.1.1",
+		"preact-router": "^2.6.0"
 	},
 	"devDependencies": {
 		"babel-core": "^6.26.0",
