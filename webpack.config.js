@@ -48,8 +48,7 @@ module.exports = {
 	},
 	devServer: {
 		proxy: {
-			'/api': 'http://localhost:8080',
-			'/socket.io': 'http://localhost:8080'
+			'/api': 'http://localhost:3000'
 		},
 		filename: 'bundle.js'
 	},
