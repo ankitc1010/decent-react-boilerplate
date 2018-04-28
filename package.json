@@ -7,7 +7,9 @@
 		"start": "npm run prod && node server.js",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "webpack-dev-server --mode development --open",
-		"prod": "webpack --mode production"
+		"prod": "webpack --mode production",
+		"test": "jest",
+		"coverage": "jest --coverage"
 	},
 	"keywords": ["boilerplate", "preact", "es6", "webpack4"],
 	"author": "Ankit Chauhan",
@@ -28,6 +30,7 @@
 		"file-loader": "^1.1.11",
 		"html-webpack-plugin": "^3.2.0",
 		"image-webpack-loader": "^4.2.0",
+		"jest": "^22.4.3",
 		"node-sass": "^4.8.3",
 		"sass-loader": "^6.0.7",
 		"style-loader": "^0.20.3",
