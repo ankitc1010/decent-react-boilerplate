@@ -50,6 +50,8 @@ module.exports = {
 		proxy: {
 			'/api': 'http://localhost:3000'
 		},
+		publicPath: '/',
+		historyApiFallback: true,
 		filename: 'bundle.js'
 	},
 	optimization: {

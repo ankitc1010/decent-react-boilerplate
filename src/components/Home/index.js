@@ -4,7 +4,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div>
-				Home Route<a href="/notfound">Not Found</a>
+				Home Route yoohoo<a href="/notfound">Not Found</a>
 			</div>
 		)
 	}
