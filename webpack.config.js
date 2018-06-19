@@ -28,10 +28,13 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				use: ExtractTextPlugin.extract({
-					fallback: 'style-loader',
-					use: ['css-loader', 'sass-loader']
+				  fallback: "style-loader",
+				  use: [
+					{ loader: "css-loader", options: { minimize: true } },
+					"sass-loader"
+				  ]
 				})
-			},
+			  },
 			{
 				test: /\.(jpe?g|png|gif|svg)$/,
 				use: [
@@ -75,10 +78,11 @@ module.exports = {
 			favicon: './public/favicon.ico'
 		}),
 		new WebpackPwaManifest({
-			name: 'Decent Preact BoilerPlate',
-			short_name: 'Decent BoilerPlate',
-			description: 'Progressive Web App Boiler Plate',
-			background_color: '#ffffff',
+			name: "Decent Preact BoilerPlate",
+			short_name: "Decent BoilerPlate",
+			description: "Progressive Web App Boiler Plate",
+			background_color: "#ffffff",
+			theme_color: "#ffffff",
 			icons: [
 				{
 					src: path.resolve('src/logo.png'),
