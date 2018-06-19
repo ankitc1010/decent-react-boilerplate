@@ -1,4 +1,4 @@
 {
-	"presets": ["preact", "stage-0"]
+	"presets": ["react", "stage-0"]
 }
 
